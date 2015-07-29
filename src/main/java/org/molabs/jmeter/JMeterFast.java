@@ -8,13 +8,11 @@ import org.apache.jmeter.samplers.SampleResult;
 
 public class JMeterFast extends AbstractJavaSamplerClient implements Serializable {
   private static final long serialVersionUID = 1L;
-
-  public SampleResult runTest(JavaSamplerContext context) {
-    
+  public SampleResult runTest(JavaSamplerContext context) {    
     SampleResult result = new SampleResult();
     result.sampleStart();
     for(int i = 0; i < 1000; i++) {
-      System.out.println("Print stuff");
+      System.out.println("Testing JMeter Code");
     }
     result.setResponseCode("Okay");
     result.setResponseMessage("JMeterFast");
@@ -22,6 +20,5 @@ public class JMeterFast extends AbstractJavaSamplerClient implements Serializabl
     result.sampleEnd();
     
     return result;
-  }
-  
+  }  
 }
